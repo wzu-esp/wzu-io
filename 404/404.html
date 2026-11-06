@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 Error — DuckXKurumi</title>
+<meta name="theme-color" content="#070708">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/bypass_tools/favicon.svg">
+<link rel="stylesheet" href="/bypass_tools/assets/styles.css">
+<style>
+  :root{--bg:#070708;--surface:#121214;--raised:#1a1a1d;--fg:#f3f3f4;--muted:#8d8d95;--ok:#3ecf6e;--gold:#f0c419}
+  *{box-sizing:border-box;margin:0}
+  html,body{background:var(--bg);color:var(--fg);font-family:"Inter","Liberation Sans",ui-sans-serif,system-ui,sans-serif}
+  body{min-height:100vh;display:grid;place-items:center;padding:24px 16px}
+  .card{width:min(100%,32rem);text-align:center;border:1px solid rgba(243,243,244,.1);background:var(--bg);border-radius:1rem;padding:40px 24px}
+  .code{font-size:clamp(4.5rem,18vw,7rem);font-weight:700;letter-spacing:-.04em;line-height:1}
+  .label{margin-top:12px;font-size:.8rem;font-weight:600;letter-spacing:.35em;color:var(--muted);text-indent:.35em}
+  .status{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .pill{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:3px 10px;font-size:.75rem;font-weight:600;letter-spacing:.03em;background:rgba(243,243,244,.1);color:var(--muted)}
+  .pill i{width:6px;height:6px;border-radius:50%;background:var(--muted)}
+  .pill.warn{background:rgba(240,196,25,.15);color:var(--gold)}.pill.warn i{background:var(--gold)}
+  .pill.ok{background:rgba(62,207,110,.15);color:var(--ok)}.pill.ok i{background:var(--ok);animation:p 1.6s ease-in-out infinite}
+  @keyframes p{50%{opacity:.3}}
+  .btn{margin-top:32px;display:inline-flex;align-items:center;height:44px;padding:0 16px;border-radius:.5rem;background:var(--fg);color:var(--bg);font-size:.875rem;font-weight:500;text-decoration:none}
+  .btn:hover{opacity:.9}
+  @media (prefers-reduced-motion:reduce){.pill i{animation:none!important}}
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1 class="code">404</h1>
+    <p class="label">ERROR</p>
+    <div class="status" role="list">
+      <span class="pill ok" role="listitem"><i></i>Link is being updated</span>
+      <span class="pill" role="listitem"><i></i>Does not exist</span>
+      <span class="pill warn" role="listitem"><i></i>Under maintenance</span>
+    </div>
+    <a class="btn" href="https://wzu-io.vercel.app">Back to Home</a>
+  </main>
+</body>
+</html>
