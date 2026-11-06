@@ -31,7 +31,7 @@ const tools = [
   { id:"ad-links", url:"https://bypass.tools/", name:"Ad Links Bypasser", description:"Website bypass linkvertise, luarmor và các trang quảng cáo nước ngoài khác.", kind:"Website", status:"working", mark:"at" },
   { id:"roblox-executors", url:"https://discord.gg/kCNr9aahXV", name:"Roblox Executors", description:"Discord share hack roblox.", kind:"Discord", status:"working", mark:"blocks" },
   { id:"Bypass BOT", url:"https://discord.gg/kCNr9aahXV", name:"Bot Bypasser", description:"Bot bypass link.", kind:"BOT", status:"working", mark:"diamond" },
-  { id:"DELTA", url:"deltaexploits.dev", name:"delta dsc", description:"roblox executor for mobile", kind:"executor", status:"working", mark:"traffic" },
+  { id:"DELTA", url:"https://deltaexploits.dev", name:"delta dsc", description:"roblox executor for mobile", kind:"executor", status:"working", mark:"traffic" },
 ];
 const filters = [
   { id:"all", label:"Tất cả" }, { id:"working", label:"Hoạt động" },
@@ -85,11 +85,11 @@ function shell(content, path) {
   const foot = nav.map(i => '<a href="'+(i.to==="/"?"index.html":i.to)+'" class="hover:text-fg">'+i.label+'</a>').join("");
   return '<div class="flex min-h-screen flex-col bg-bg text-fg">'+
   '<header class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-5">'+
-    '<a href="index.html" class="inline-flex shrink-0 items-center gap-2 text-fg">'+duckMark("size-5")+'<span class="text-sm font-semibold tracking-tight">DuckXKurumi</span></a>'+
+    '<a href="index.html" class="inline-flex shrink-0 items-center gap-2 text-fg">'+duckMark("size-5")+'<span class="text-sm font-semibold tracking-tight">DXT Community</span></a>'+
     '<nav class="flex max-w-full items-center gap-2 overflow-x-auto" aria-label="Chính">'+items+
     '<a href="'+DISCORD+'" target="_blank" rel="noreferrer" class="inline-flex h-10 shrink-0 items-center gap-2 rounded-xl border border-fg/10 bg-bg px-3 text-sm text-fg/80 hover:border-fg/25">'+discordMark("size-4")+'Discord</a></nav></header>'+
   '<main class="mx-auto w-full max-w-6xl flex-1 px-4 pb-8">'+content+'</main>'+
-  '<footer class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between"><p>© 2026 DuckXKurumi</p>'+
+  '<footer class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between"><p>© 2026 DXT Community</p>'+
     '<div class="flex flex-wrap items-center gap-x-4 gap-y-2">'+foot+
     '<a href="'+DISCORD+'" target="_blank" rel="noreferrer" class="hover:text-fg">Discord</a>'+
     '<button type="button" class="hover:text-fg" data-action="youtube">YouTube</button></div></footer></div>';
@@ -100,7 +100,7 @@ function panel(title, lede, body) {
 function homePage() {
   const working = tools.filter(t=>t.status==="working").length;
   const card = (to,t,d) => '<a href="'+to+'" class="rounded-xl border border-fg/10 bg-surface p-4 hover:border-fg/25"><p class="text-sm font-semibold">'+t+'</p><p class="mt-1 text-xs text-muted">'+d+'</p></a>';
-  return panel("Home","Thư mục công cụ DuckXKurumi. Trạng thái, bộ lọc và thẻ nằm ở Bypass Tools.",
+  return panel("Home","Thư mục công cụ DXT. Trạng thái, bộ lọc và thẻ nằm ở Bypass Tools.",
     '<div class="grid grid-cols-1 gap-3 sm:grid-cols-3">'+card("/","Bypass Tools",working+" đang hoạt động")+card("/materials","Materials","Ghi chú và tài nguyên giao diện")+card("/developing","In Developing","Những mục đang làm")+'</div>');
 }
 function materialsPage() {
