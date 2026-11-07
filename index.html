@@ -392,7 +392,7 @@
 
   // Hiệu ứng gõ chữ (typewriter) cho ô tag
   (function(){
-    const words=['Duck of Doom','Roblox Script Dev','Content Creator','Vietnamese Gamer'];
+    const words=['Cat of Doom','Roblox Script Dev','Content Creator','Vietnamese Gamer'];
     const el=document.getElementById('typed'), caret=document.querySelector('.caret');
     const TYPE=90, DELETE=50, HOLD=2000, GAP=350;
     let w=0, i=0, deleting=false;
@@ -450,8 +450,7 @@
       if(parts.length){raf=requestAnimationFrame(loop)} else {raf=null;last=0;ctx.clearRect(0,0,innerWidth,innerHeight)}
     }
     addEventListener('pointerdown',e=>{
-      if(e.target.closest && (e.target.closest('#player')||e.target.closest('#gate'))) return;   // không bắn hạt ở nút nhạc & bảng điều khiển nhạc
-      if(e.button===0||e.pointerType==='touch') burst(e.clientX,e.clientY);
+      if(e.target.closest && (e.target.closest('#player')||e.target.closest('#gate'))) return;
     });
   })();
 </script>
