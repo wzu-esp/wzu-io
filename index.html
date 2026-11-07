@@ -131,18 +131,18 @@
 
   /* Music player */
   .player{
-    position:fixed;left:24px;bottom:24px;display:flex;align-items:flex-end;gap:0;z-index:50;
+    position:fixed;left:24px;bottom:24px;display:flex;align-items:flex-end;gap:0;z-index:50;pointer-events:none;
   }
   .toggle{
     width:58px;height:58px;border-radius:50%;border:3px solid rgba(255,255,255,.35);cursor:pointer;
     background:linear-gradient(135deg,#ff5fb0,#ff3d8f);color:#fff;display:flex;align-items:center;justify-content:center;
-    box-shadow:0 0 22px rgba(255,79,163,.6);position:absolute;left:-4px;bottom:-4px;z-index:2;
+    box-shadow:0 0 22px rgba(255,79,163,.6);position:absolute;left:-4px;bottom:-4px;z-index:2;pointer-events:auto;
   }
   .toggle svg{width:26px;height:26px}
   .pcard{
     width:380px;margin-left:8px;margin-bottom:12px;padding:18px 18px 16px;border-radius:16px;
     background:rgba(36,19,56,.92);backdrop-filter:blur(14px);border:1px solid rgba(255,79,163,.4);
-    box-shadow:0 10px 40px rgba(0,0,0,.5);transition:.3s;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);transition:.3s;pointer-events:auto;
   }
   .player.closed .pcard{opacity:0;pointer-events:none;transform:translateX(-20px)}
   .ptop{display:flex;gap:14px;align-items:center}
@@ -392,7 +392,7 @@
 
   // Hiệu ứng gõ chữ (typewriter) cho ô tag
   (function(){
-    const words=['Cat of Doom','Roblox Script Dev','Content Creator','Vietnamese Gamer'];
+    const words=['Duck of Doom','Roblox Script Dev','Content Creator','Vietnamese Gamer'];
     const el=document.getElementById('typed'), caret=document.querySelector('.caret');
     const TYPE=90, DELETE=50, HOLD=2000, GAP=350;
     let w=0, i=0, deleting=false;
@@ -450,7 +450,8 @@
       if(parts.length){raf=requestAnimationFrame(loop)} else {raf=null;last=0;ctx.clearRect(0,0,innerWidth,innerHeight)}
     }
     addEventListener('pointerdown',e=>{
-      if(e.target.closest && (e.target.closest('#player')||e.target.closest('#gate'))) return;
+      if(e.target.closest && e.target.closest('#gate')) return;   // không bắn hạt ở màn hình CLICK TO START
+      if(e.button===0||e.pointerType==='touch') burst(e.clientX,e.clientY);
     });
   })();
 </script>
